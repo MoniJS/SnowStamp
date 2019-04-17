@@ -9,14 +9,17 @@ const discordEpoch = 1420070400000;
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "public")));
 
-app.post("/stamp", (req, res) => {
-  const messageIdString = req.body.id;
+app.get("/timeStamp", (req, res) => {
+  const messageIdString = req.query.message;
+  console.log(messageIdString);
+  console.log(typeof messageIdString);
   const id = BigInt.asUintN(64, messageIdString);
   const dateBits = Number(id >> 22n);
 
   let date = new Date(dateBits + discordEpoch);
-  const time = moment.utc(date).format("MM/DD-YYYY kk:mm:ss");
-  console.log(`${time} UTC`);
+  const timeF = moment.utc(date).format("MM/DD-YYYY kk:mm:ss");
+  let time = `${timeF} UTC`;
+  res.send({time});
 });
 
 const port = process.env.PORT || 3000;

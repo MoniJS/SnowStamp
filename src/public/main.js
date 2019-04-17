@@ -1,23 +1,19 @@
 Vue.component("convert", {
   data() {
     return {
-      message: ""
+      message: "",
+      timeStamp: ""
     };
   },
   methods: {
     getTimestamp: function() {
-      let a = {
-        id: this.message
-      };
-
-      console.log(this.message);
-      fetch("/stamp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(a)
-      }).then(res => console.log(res));
+      fetch(`/timeStamp?message=${this.message}`, {
+        method: "GET",
+      })
+      .then(res => res.json())
+      .then(({time}) => {
+        this.timeStamp = time;
+      });
     }
   },
   template: `
@@ -28,6 +24,10 @@ Vue.component("convert", {
     <div>
       <input type="text" id="input" v-model="message" placeholder="Message ID"></input>
       <button @click="getTimestamp">Submit</button>
+    </div>
+    <br />
+    <div v-if="timeStamp">
+      <p>Message sent on: {{ timeStamp }}.</p>
     </div>
   </div>
   `
