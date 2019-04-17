@@ -7,5 +7,8 @@
     "express": "4.16.4",
     "body-parser": "1.18.3",
     "moment": "2.24.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
   }
 }

@@ -15,7 +15,7 @@ app.post("/stamp", (req, res) => {
   const dateBits = Number(id >> 22n);
 
   let date = new Date(dateBits + discordEpoch);
-  const time = moment.utc(date).format('MM/DD-YYYY kk:mm:ss')
+  const time = moment.utc(date).format("MM/DD-YYYY kk:mm:ss");
   console.log(`${time} UTC`);
 });
 

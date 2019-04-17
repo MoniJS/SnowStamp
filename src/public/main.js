@@ -1,8 +1,8 @@
 Vue.component("convert", {
   data() {
     return {
-      message: ''
-    }
+      message: ""
+    };
   },
   methods: {
     getTimestamp: function() {
@@ -17,8 +17,7 @@ Vue.component("convert", {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(a)
-      })
-      .then(res => console.log(res));
+      }).then(res => console.log(res));
     }
   },
   template: `
