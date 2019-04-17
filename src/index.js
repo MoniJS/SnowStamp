@@ -2,7 +2,7 @@ let express = require("express");
 let bodyParser = require("body-parser");
 let moment = require("moment");
 let path = require("path");
-let app = express();
+let app = express();    
 
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "public")));
