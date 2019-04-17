@@ -5,103 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./main.js" defer></script>
   <title>SnowStamp</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      font-family: "Lato", sans-serif;
-    }
-
-    #app-outer {
-      height: 100vh;
-      width: 100vw;
-      background-color: #f8f9fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #main {
-      /* width: 500px;
-      height: 300px; */
-      background-color: #dee2e6;
-      padding: 10px;
-      border-radius: 5px;
-      max-width: 300px;
-    }
-
-    input[type=text] {
-      color: #212529;
-      background-color: #f8f9fa;
-      padding: 4px;
-      border: 1px solid #868e96;
-      border-radius: 3px;
-    }
-
-    button {
-      padding: 4px;
-      border: 1px solid #868e96;
-      background-color: #e9ecef;
-      color: #212529;
-      border-radius: 3px;
-    }
-
-    button:hover {
-      cursor: pointer;
-      background-color: #ced4da;
-      transition: background-color 0.15s ease-in-out;
-    }
-  </style>
-
 </head>
 <body>
   <div id="app-outer">
     <div id="app">
     </div>
   </div>
-  <script>
-    Vue.component("convert", {
-      data() {
-        return {
-          message: ''
-        }
-      },
-      methods: {
-        getTimestamp: function() {
-          let a = {
-            id: this.message
-          };
-
-          console.log(this.message);
-          fetch("/stamp", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(a)
-          })
-          .then(res => console.log(res));
-        }
-      },
-      template: `
-      <div id="main">
-        <h1>Enter Message ID</h1>
-        <p>Find out when a Discord message has been sent from it's message ID.</p>
-        <br />
-        <div>
-          <input type="text" id="input" v-model="message" placeholder="Message ID"></input>
-          <button @click="getTimestamp">Submit</button>
-        </div>
-      </div>
-      `
-    });
-
-    let vm = new Vue({
-      el: "#app",
-      template: `<convert />`
-    });
-  </script>
 </body>
 </html>
