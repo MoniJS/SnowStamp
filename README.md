@@ -54,9 +54,9 @@ This way we can contact the person regarding the issue. :)
 ## Setup
 
 ```bash
-`git clone https://github.com/moni-js/SnowStamp`
+git clone https://github.com/moni-js/SnowStamp
 cd SnowStamp
-`npm start` # development server on port 3000
+npm start # development server on port 3000
 ```
 
 ## Help
