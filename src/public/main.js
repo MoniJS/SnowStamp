@@ -7,13 +7,13 @@ Vue.component("convert", {
   },
   methods: {
     getTimestamp: function() {
-      fetch(`/timeStamp?message=${this.message}`, {
-        method: "GET",
+      fetch(`/time-stamp?message=${this.message}`, {
+        method: "GET"
       })
-      .then(res => res.json())
-      .then(({time}) => {
-        this.timeStamp = time;
-      });
+        .then(res => res.json())
+        .then(({ timeFormated }) => {
+          this.timeStamp = timeFormated;
+        });
     }
   },
   template: `
