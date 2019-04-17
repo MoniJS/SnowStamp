@@ -8,7 +8,7 @@
   <p>
     <a href="https://discord.gg/jQdFFH6"><img 	src="https://img.shields.io/discord/550140222822809610.svg?colorB=Blue&logo=discord&label=Support&style=for-the-badge" alt="Discord server" /></a>
     <a href="https://discord.gg/jQdFFH6">
-    <img src="https://img.shields.io/travis/moni-js/snowstamp/master.svg?style=for-the-badge" alt="Build">
+    <img src="https://img.shields.io/travis-ci.com/moni-js/SnowStamp/master.svg?style=for-the-badge" alt="Build">
 </a>
     <a href="https://discord.gg/jQdFFH6"><img src="https://img.shields.io/github/languages/top/moni-js/snowstamp.svg?colorB=f0db4f&style=for-the-badge" alt="Language" /></a>
 <a href="https://github.com/moni-js/moni/issues">
@@ -23,7 +23,7 @@
 
 ## About
 
-Snow Stamp is made with Node.js and Vue.js. It converts any Discord or Twitter Snowflake into exact Time. A Discord Snowflake❄️ Converter. 
+Snow Stamp is made with Node.js and Vue.js. It converts any Discord or Twitter Snowflake into exact Time. A Discord Snowflake❄️ Converter.
 
 - Open-Source
 - Node.js
