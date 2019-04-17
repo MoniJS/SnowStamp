@@ -50,12 +50,14 @@ Snow Stamp is made with Node.js and Vue.js. It converts any Discord or Twitter S
 If you wish to contribute to SnowStamp codebase or documentation, feel free to fork the repository and submit a
 pull request. Also a Requirement is join the [Discord server](https://discord.gg/jQdFFH6).
 This way we can contact the person regarding the issue. :)
-## Setup
-To get ready to work on the codebase, please do the following:
 
-1. Fork & clone the repository, and make sure you're on the **master** branch
-2. Code your heart out!
-3. [Submit a pull request](https://github.com/monis10/wtf-py)
+## Setup
+
+```bash
+`git clone https://github.com/moni-js/SnowStamp`
+cd SnowStamp
+`npm start` # development server on port 3000
+```
 
 ## Help
 
