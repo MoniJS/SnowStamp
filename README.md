@@ -8,7 +8,7 @@
   <p>
     <a href="https://discord.gg/jQdFFH6"><img 	src="https://img.shields.io/discord/550140222822809610.svg?colorB=Blue&logo=discord&label=Support&style=for-the-badge" alt="Discord server" /></a>
     <a href="https://discord.gg/jQdFFH6">
-    <img src="https://img.shields.io/travis/moni-js/SnowStamp/master.svg?style=for-the-badge" alt="Build">
+    <img src="https://img.shields.io/travis/com/moni-js/snowstamp.svg?style=for-the-badge" alt="Build">
 </a>
     <a href="https://discord.gg/jQdFFH6"><img src="https://img.shields.io/github/languages/top/moni-js/snowstamp.svg?colorB=f0db4f&style=for-the-badge" alt="Language" /></a>
 <a href="https://github.com/moni-js/moni/issues">
