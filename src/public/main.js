@@ -2,7 +2,8 @@ Vue.component("convert", {
   data() {
     return {
       message: "",
-      timeStamp: ""
+      timeStamp: "",
+      error: ""
     };
   },
   methods: {
@@ -13,6 +14,11 @@ Vue.component("convert", {
         .then(res => res.json())
         .then(({ timeFormated }) => {
           this.timeStamp = timeFormated;
+          this.error = "";
+        })
+        .catch(e => {
+          this.error = e;
+          this.timeStamp = "";
         });
     }
   },
@@ -28,6 +34,10 @@ Vue.component("convert", {
     <br />
     <div v-if="timeStamp">
       <p>Message sent on: {{ timeStamp }}.</p>
+    </div>
+    <div v-if="error">
+      <p>Not a valid request.</p>
+      <p>{{ error }}</p>
     </div>
   </div>
   `
