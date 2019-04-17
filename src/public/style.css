@@ -4,7 +4,8 @@
   font-family: "Lato", sans-serif;
 }
 
-#app-outer {
+.app-outer {
+  position: relative;
   height: 100vh;
   width: 100vw;
   background-color: #f8f9fa;
@@ -13,9 +14,7 @@
   justify-content: center;
 }
 
-#main {
-  /* width: 500px;
-  height: 300px; */
+.main {
   background-color: #dee2e6;
   padding: 10px;
   border-radius: 5px;
@@ -42,4 +41,20 @@ button:hover {
   cursor: pointer;
   background-color: #ced4da;
   transition: background-color 0.15s ease-in-out;
+}
+
+.github-corner {
+  position: fixed;
+  right: 0;
+  top: 0;
+  border-bottom: 0;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.github-corner svg {
+  color: #fff;
+  fill: rgb(27, 221, 177);
+  height: 80px;
+  width: 80px
 }
