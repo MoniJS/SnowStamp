@@ -54,6 +54,7 @@ This way we can contact the person regarding the issue. :)
 ```bash
 git clone https://github.com/moni-js/SnowStamp
 cd SnowStamp
+npm install # install dependency
 npm start # development server on port 3000
 ```
 
