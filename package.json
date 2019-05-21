@@ -9,7 +9,7 @@
     "moment": "^2.24.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.11",
+    "nodemon": "^1.19.0",
     "prettier": "^1.17.1"
   }
 }
