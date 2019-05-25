@@ -16,7 +16,7 @@ app.get("/time-stamp", (req, res) => {
 
   const date = new Date(dateBits + discordEpoch);
   const unix = (dateBits + discordEpoch);
-  console.log(unix); //unix = Unix date
+  console.log(` Unix - ${unix}`); //unix = Unix date
   const time = moment.utc(date).format('MMMM Do YYYY, h:mm:ss a');
   const timeFormated = `${time} UTC`;
   res.send({timeFormated});
