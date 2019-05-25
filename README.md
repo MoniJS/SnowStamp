@@ -56,7 +56,7 @@ git clone https://github.com/moni-js/SnowStamp
 cd SnowStamp
 npm install # install dependency
 npm start # development server on port 3000
-#http://localhost:3000
+#http://localhost:3000 
 ```
 
 ## Help
