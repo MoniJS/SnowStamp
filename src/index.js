@@ -2,7 +2,7 @@ let express = require("express");
 let bodyParser = require("body-parser");
 let moment = require("moment");
 let path = require("path");
-let app = express();    
+let app = express();
 
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "public")));
@@ -15,7 +15,7 @@ app.get("/time-stamp", (req, res) => {
   const dateBits = Number(id >> 22n);
 
   const date = new Date(dateBits + discordEpoch);
-  const time = moment.utc(date).format("MM/DD-YYYY kk:mm:ss");
+  const time = moment.utc(date).format("MM-DD-YYYY kk:mm:ss");
   const timeFormated = `${time} UTC`;
   res.send({timeFormated});
 });
