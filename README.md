@@ -30,7 +30,7 @@
 
 ## About
 
-Snow Stamp is made with Node.js and Vue.js. It converts any Discord or Twitter Snowflake into exact Time. A Discord Snowflake❄️ Converter.
+Snow Stamp is made with Node.js and Vue.js. It converts any Discord or Twitter Snowflake into exact Time (UTC). A Discord Snowflake❄️ Converter.
 
 - Open-Source
 - Node.js
