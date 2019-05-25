@@ -1,6 +1,6 @@
 let express = require("express");
 let bodyParser = require("body-parser");
-let moment = require("moment");
+var moment = require('moment-timezone');
 let path = require("path");
 let app = express();
 
@@ -15,6 +15,8 @@ app.get("/time-stamp", (req, res) => {
   const dateBits = Number(id >> 22n);
 
   const date = new Date(dateBits + discordEpoch);
+  const unix = (dateBits + discordEpoch);
+  console.log(unix); //unix = Unix date
   const time = moment.utc(date).format('MMMM Do YYYY, h:mm:ss a');
   const timeFormated = `${time} UTC`;
   res.send({timeFormated});
