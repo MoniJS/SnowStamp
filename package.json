@@ -1,6 +1,8 @@
 {
   "main": "index.js",
   "scripts": {
+    "test": "eslint ./",
+    "lint": "eslint --fix src/",
     "start": "nodemon -e html,css,js src/index.js"
   },
   "dependencies": {
@@ -12,6 +14,8 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.0",
-    "prettier": "^1.17.1"
+    "prettier": "^1.17.1",
+    "eslint": "^5.16.0",
+    "eslint-config-aqua": "^6.0.0"
   }
 }
