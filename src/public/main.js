@@ -11,11 +11,13 @@ Vue.component("convert", {
     return {
       message: "",
       timeStamp: "",
+      unixTime: "",
+      isoTime: "",
       error: ""
     };
   },
   methods: {
-    getTimestamp: function() {
+    getTime: function() {
       fetch(`/time-stamp?message=${this.message}`, {
         method: "GET"
       })
@@ -28,7 +30,35 @@ Vue.component("convert", {
           this.error = e;
           this.timeStamp = "";
         });
-    }
+    },
+    getUnixTime: function() {
+      fetch(`/unix-stamp?message=${this.message}`, {
+        method: "GET"
+      })
+        .then(res => res.json())
+        .then(({ unix }) => {
+          this.unixTime = unix;
+          this.error = "";
+        })
+        .catch(e => {
+          this.error = e;
+          this.unixTime = "";
+        });
+    },
+    getIsoTime: function() {
+      fetch(`/iso-stamp?message=${this.message}`, {
+        method: "GET"
+      })
+        .then(res => res.json())
+        .then(({ iso }) => {
+          this.isoTime = iso;
+          this.error = "";
+        })
+        .catch(e => {
+          this.error = e;
+          this.isoTime = "";
+        });
+    },
   },
   template: `
   <div class="main">
@@ -37,11 +67,19 @@ Vue.component("convert", {
     <br />
     <div>
       <input type="text" id="input" v-model="message" placeholder="Message ID"></input>
-      <button @click="getTimestamp">Submit</button>
+      <button @click="getTime(); getUnixTime(); getIsoTime();">Submit</button>
     </div>
     <br />
     <div v-if="timeStamp">
-      <p>Message sent on: {{ timeStamp }}.</p>
+      <p>Time - {{ timeStamp }}</p>
+    </div>
+    <br />
+    <div v-if="unixTime">
+      <p>Unix - {{ unixTime }}</p>
+    </div>
+    <br />
+    <div v-if="isoTime">
+      <p>ISO 8601 - {{ isoTime }}</p>
     </div>
     <div v-if="error">
       <p>Not a valid request.</p>
