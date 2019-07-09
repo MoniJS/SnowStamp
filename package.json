@@ -15,7 +15,7 @@
   "devDependencies": {
     "nodemon": "^1.19.0",
     "prettier": "^1.17.1",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "eslint-config-aqua": "^6.0.0"
   }
 }
